@@ -1,0 +1,20 @@
+.ellipsis {
+  display: block !important;
+  display: -moz-box !important;
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-line;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.snippet-title {
+  a:link {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  a:hover, a:active {
+    background-color: rgba($color: #000000, $alpha: .5);
+  }
+}

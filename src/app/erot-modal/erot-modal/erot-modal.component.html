@@ -1,0 +1,17 @@
+<div class="modal">
+    <header class="modal-header">
+        <div class="modal-info">
+            <h2>{{headerText}}</h2>
+            <button class="modal-close" erot-button appearance="icon" (click)="close()">
+                X
+            </button>
+        </div>
+        <ng-content select="[modalHeader]"></ng-content>
+    </header>
+    <div class="modal-content" [class.gradient-mask]="!contentScrollOnBottom" (scroll)="onContentScroll($event)">
+        <ng-content select="[modalBody]"></ng-content>
+    </div>
+    <footer class="modal-footer">
+        <ng-content select="[modalFooter]"></ng-content>
+    </footer>
+</div>
